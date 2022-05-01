@@ -41,7 +41,7 @@ export default function TextForm(props) {
   </div>
   <div className="container">
     <h2>Your text summary</h2>
-    <p>{wordCount} words and {text.length} characters</p>
+    <p>{text==('')?wordCount-1:wordCount} words and {text.length} characters</p>
     <p>{0.008 * wordCount} Minutes to read</p>
     <h2>Preview</h2>
     <p>{text.length>0?text:"Enter something in the textbox above to preview it here"}</p>
