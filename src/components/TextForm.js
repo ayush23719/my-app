@@ -6,11 +6,13 @@ export default function TextForm(props) {
         console.log('Uppercase Clicked ' + text);
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to uppercase","success");
     }
     const handleLowClick = ()=>{
       console.log('Lowercase Clicked ' + text);
       let newText = text.toLowerCase();
       setText(newText);
+      props.showAlert("Converted to lowercase","success");
   }
     const handleOnChange = (event)=>{
         console.log('You clicked handleOnChange ');
@@ -41,7 +43,7 @@ export default function TextForm(props) {
   </div>
   <div className="container">
     <h2>Your text summary</h2>
-    <p>{text==('')?wordCount-1:wordCount} words and {text.length} characters</p>
+    <p>{text.length>0 ? text.trim().split(" ").length : 0} words and {text.length} characters</p>
     <p>{0.008 * wordCount} Minutes to read</p>
     <h2>Preview</h2>
     <p>{text.length>0?text:"Enter something in the textbox above to preview it here"}</p>

@@ -18,6 +18,9 @@ function App() {
       msg: message,
       type: type
     })
+     setTimeout(() => {
+      setAlert(null);
+    }, 1500);
   }
   const [btnText,setBtnText] = useState("Enable Dark Mode");
   const toggleStyle = ()=>{
@@ -47,7 +50,7 @@ function App() {
   <Navbar title = "TextUtils" aboutText="About TextUtils" btnText = {btnText} toggleStyle = {toggleStyle} mode={mode} />
   <Alert alert = {alert} />
   <div className="container">
-  <TextForm heading = "Enter the text to analyze" myStyle={myStyle} />
+  <TextForm showAlert = {showAlert} heading = "Enter the text to analyze" myStyle={myStyle} />
   </div>
   </div>
   </>
