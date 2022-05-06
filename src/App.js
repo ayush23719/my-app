@@ -43,7 +43,7 @@ function App() {
     else{
       setMyStyle({
         color: 'white',
-        backgroundColor: 'black'
+        backgroundColor: 'black',
       })
       setBtnText("Disable Dark Mode")
       setMode('dark');
@@ -58,7 +58,7 @@ function App() {
   <Alert alert = {alert} />
   <div className="container">
   <Routes>
-          <Route path="/about" element={<About myStyle={myStyle} />}>
+          <Route path="/about" element={<About />}>
           </Route>
           <Route path="/" element={ <TextForm showAlert = {showAlert} heading = "Enter the text to analyze" myStyle={myStyle} />}>
           </Route>

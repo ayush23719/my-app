@@ -1,8 +1,12 @@
 import React from 'react'
 
 export default function About(props) {
+  let myStyle = {
+    color: props.mode === 'Light'?'white':'black',
+    backgroundColor: props.mode ==='Dark'?'black':'white',
+  }
   return (
-    <div className="Container" style={props.myStyle}><div class="accordion" id="accordionExample">
+    <div className="Container" style={myStyle}><div class="accordion" id="accordionExample">
     <div class="accordion-item" >
       <h2 class="accordion-header" id="headingOne">
         <button  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
